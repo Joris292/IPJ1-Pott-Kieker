@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+eggs/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+*.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.venv
+
+# Data files (large) - usually avoid tracking large CSV/XLSX
+*.csv
+*.xlsx
+*.xls
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# OneDrive temp files
+~$*
+
+# Logs
+*.log
