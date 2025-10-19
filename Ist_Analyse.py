@@ -16,7 +16,7 @@ erzeugung["Datum von"] = pd.to_datetime(erzeugung["Datum von"], format="%d.%m.%Y
 verbrauch["Datum von"] = pd.to_datetime(verbrauch["Datum von"], format="%d.%m.%Y %H:%M")
 
 # ==============================
-# 3. Spalten mit MWh bereinigen
+# 3. Spalten mit MWh bereinigen Das ist eine Änderung gegenüber der ursprünglichen Version
 # ==============================
 for col in erzeugung.columns:
     if "MWh" in col:
