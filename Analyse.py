@@ -71,14 +71,21 @@ erzeugung["Erneuerbare [MWh]"] = erzeugung[erneuerbare_cols].sum(axis=1)
 # ==============================
 
 gesamt = pd.merge(
-    erzeugung[["Datum von", "Erneuerbare [MWh]"]],
-    verbrauch[["Datum von", "Netzlast [MWh] Originalauflösungen"]],
+    erzeugung[["Datum von","Biomasse [MWh] Originalauflösungen",
+        "Wasserkraft [MWh] Originalauflösungen",
+        "Wind Offshore [MWh] Originalauflösungen",
+        "Wind Onshore [MWh] Originalauflösungen",
+        "Photovoltaik [MWh] Originalauflösungen",
+        "Sonstige Erneuerbare [MWh] Originalauflösungen",
+        "Erneuerbare [MWh]"]],
+    verbrauch[["Datum von", "Netzlast [MWh] Originalauflösungen",
+        "Netzlast inkl. Pumpspeicher [MWh] Originalauflösungen"]],
     on="Datum von",
     how="inner",
 )
 
 gesamt["Anteil Erneuerbare [MWh]"] = (
-    gesamt["Erneuerbare [MWh]"] / gesamt["Netzlast [MWh] Originalauflösungen"] * 100
+    gesamt["Erneuerbare [MWh]"] / gesamt["Netzlast inkl. Pumpspeicher [MWh] Originalauflösungen"] * 100
 ).round(2)
 
 # ==============================
