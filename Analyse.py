@@ -152,7 +152,6 @@ else:
 
     # verhindert, dass Labels vom Fensterrand oder Menüs überdeckt werden
     plt.tight_layout()
-    plt.subplots_adjust(bottom=0.18)
     
 plt.show()
 
